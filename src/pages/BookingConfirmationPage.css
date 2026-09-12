@@ -1,0 +1,113 @@
+.booking-confirmation-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0) 0 0/24px 24px,
+    radial-gradient(120% 120% at 85% 110%, rgba(255, 255, 255, 0.14), transparent 60%),
+    linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
+.booking-confirmation-page__container {
+  max-width: 560px;
+  width: 100%;
+}
+
+.booking-confirmation-page__card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-7);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.booking-confirmation-page__icon {
+  width: 72px;
+  height: 72px;
+  background: var(--color-success-soft);
+  border: 2px solid var(--color-success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+  font-size: 32px;
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.booking-confirmation-page__card h1 {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.booking-confirmation-page__message {
+  font-size: 15px;
+  color: var(--color-ink-soft);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.booking-confirmation-page__details {
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+  text-align: left;
+}
+
+.booking-confirmation-page__details p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-ink-soft);
+}
+
+.booking-confirmation-page__details strong {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.booking-confirmation-page__actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.booking-confirmation-page__button {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 13px var(--space-6);
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-accent);
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.booking-confirmation-page__button:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+.booking-confirmation-page__button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .booking-confirmation-page__card {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .booking-confirmation-page__card h1 {
+    font-size: 22px;
+  }
+}

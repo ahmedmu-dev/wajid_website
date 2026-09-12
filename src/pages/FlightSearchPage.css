@@ -1,0 +1,140 @@
+.flight-search-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.flight-search-page__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px var(--space-8);
+}
+
+.flight-search-page__header {
+  text-align: center;
+  color: white;
+  padding: var(--space-7) 20px calc(var(--space-8) + 40px);
+  margin: 0 calc(50% - 50vw) 0;
+  width: 100vw;
+  max-width: 100vw;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0) 0 0/24px 24px,
+    radial-gradient(120% 140% at 12% -20%, rgba(255, 255, 255, 0.16), transparent 60%),
+    linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
+.flight-search-page__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.flight-search-page__mark {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  color: var(--color-accent);
+}
+
+.flight-search-page__mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flight-search-page__wordmark {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.flight-search-page__header h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-3) 0;
+}
+
+.flight-search-page__subtitle {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+
+.flight-search-page__empty {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+  color: var(--color-ink-soft);
+}
+
+.flight-search-page__results {
+  background: transparent;
+}
+
+.flight-search-page__results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-5);
+  background: var(--color-surface);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.flight-search-page__results-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.flight-search-page__sort {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.flight-search-page__sort label {
+  font-size: 13px;
+  color: var(--color-ink-soft);
+  font-weight: 600;
+}
+
+.flight-search-page__sort select {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.flight-search-page__sort select:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.flight-search-page__flights {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .flight-search-page__header {
+    padding: var(--space-6) 16px calc(var(--space-7) + 32px);
+  }
+
+  .flight-search-page__results-header {
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: stretch;
+  }
+
+  .flight-search-page__sort {
+    justify-content: space-between;
+  }
+}
